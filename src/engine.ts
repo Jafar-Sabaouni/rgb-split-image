@@ -168,8 +168,7 @@ export function useEffectEngine(config: EngineConfig) {
 
   const handleMouseEnter = useCallback(() => {
     isHovered.current = true;
-    if (configRef.current.onHover === "glitch") triggerTempEffect("glitch");
-  }, [triggerTempEffect]);
+  }, []);
 
   const handleMouseLeave = useCallback(() => {
     isHovered.current = false;

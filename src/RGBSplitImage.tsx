@@ -34,21 +34,21 @@ const RGBSplitImageInner = React.forwardRef<HTMLElement, RGBSplitImageProps<any,
     const containerRef = useRef<HTMLElement | null>(null);
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
+
         const handleReduceMotion = (e: MediaQueryListEvent | MediaQueryList) => {
             setIsDisabled(e.matches || (disableOnMobile && window.innerWidth <= 768));
         };
         const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
         handleReduceMotion(motionQuery);
 
-        if (motionQuery.addEventListener) {
-            motionQuery.addEventListener('change', handleReduceMotion);
-        }
+        motionQuery.addEventListener('change', handleReduceMotion);
 
         const handleResize = () => handleReduceMotion(motionQuery);
         window.addEventListener('resize', handleResize);
 
         return () => {
-            if (motionQuery.removeEventListener) motionQuery.removeEventListener('change', handleReduceMotion);
+            motionQuery.removeEventListener('change', handleReduceMotion);
             window.removeEventListener('resize', handleResize);
         };
     }, [disableOnMobile]);
@@ -82,7 +82,7 @@ const RGBSplitImageInner = React.forwardRef<HTMLElement, RGBSplitImageProps<any,
     });
 
     useEffect(() => {
-        if (!trackWindowMouse) return;
+        if (!trackWindowMouse || typeof window === 'undefined') return;
 
         const handleWindowMouseMove = (e: MouseEvent) => {
             engine.handlers.onMouseMove(e, containerRef.current);
