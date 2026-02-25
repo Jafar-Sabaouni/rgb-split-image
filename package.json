@@ -1,0 +1,46 @@
+{
+  "name": "rgb-split-image",
+  "version": "1.0.0",
+  "description": "A highly customizable React component for creating event-driven chromatic aberration effects.",
+  "type": "module",
+  "main": "dist/rgb-split-image.cjs",
+  "module": "dist/rgb-split-image.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/rgb-split-image.js",
+      "require": "./dist/rgb-split-image.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "tsc && vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.0.0"
+  },
+  "keywords": [
+    "react",
+    "image",
+    "effect",
+    "chromatic",
+    "aberration",
+    "rgb-split",
+    "glitch"
+  ],
+  "author": "",
+  "license": "MIT"
+}
