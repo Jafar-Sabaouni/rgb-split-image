@@ -21,8 +21,8 @@ function App() {
               src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
               alt="Retro Synth"
               idleEffect="breathe"
-              breatheSpeed={1.5}
-              splitDistance={20}
+              breatheSpeed={1}
+              splitDistance={11}
             />
           </div>
           <div>
@@ -39,7 +39,7 @@ function App() {
               src="https://plus.unsplash.com/premium_photo-1661963874418-df1110ee39c1?q=80&w=1686&auto=format&fit=crop"
               alt="Cyberpunk City"
               idleEffect="followMouse"
-              splitDistance={35}
+              splitDistance={18}
               colorSpace="rgb"
             />
           </div>
@@ -58,9 +58,9 @@ function App() {
               alt="Cyber Grid"
               idleEffect="none"
               onClick="glitch"
-              effectDuration={800}
-              effectIntensity={2.5}
-              splitDistance={50}
+              effectDuration={400}
+              effectIntensity={1.25}
+              splitDistance={25}
               colorSpace="cmyk"
             />
           </div>
@@ -78,9 +78,9 @@ function App() {
               src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=2070&auto=format&fit=crop"
               alt="Mountains"
               idleEffect="breathe"
-              breatheSpeed={1.0}
+              breatheSpeed={0.5}
               onHover="glitch"
-              splitDistance={45}
+              splitDistance={22}
             />
           </div>
           <div>
@@ -98,10 +98,10 @@ function App() {
               alt="Globe"
               idleEffect="none"
               onMount="breathe"
-              effectDuration={4000}
-              effectIntensity={1.5}
-              breatheSpeed={2.5}
-              splitDistance={40}
+              effectDuration={2000}
+              effectIntensity={0.75}
+              breatheSpeed={1.25}
+              splitDistance={20}
             />
           </div>
           <div>
@@ -118,7 +118,7 @@ function App() {
               src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=2070&auto=format&fit=crop"
               alt="Mountains"
               idleEffect="followMouse"
-              splitDistance={30}
+              splitDistance={15}
               grayscale={true}
             />
           </div>
@@ -136,7 +136,7 @@ function App() {
               src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop"
               alt="Retro Synth"
               idleEffect="glitch"
-              splitDistance={300}
+              splitDistance={150}
               colorSpace="cmyk"
             />
           </div>
@@ -155,8 +155,8 @@ function App() {
               alt="Globe"
               idleEffect="none"
               onHover="breathe"
-              breatheSpeed={3}
-              splitDistance={30}
+              breatheSpeed={1.5}
+              splitDistance={15}
             />
           </div>
           <div>
@@ -173,7 +173,7 @@ function App() {
               src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop"
               alt="Cyber Grid"
               idleEffect="followMouse"
-              splitDistance={40}
+              splitDistance={20}
               trackWindowMouse={true}
             />
           </div>

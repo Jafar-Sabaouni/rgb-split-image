@@ -1,12 +1,14 @@
-
 # rgb-split-image
 
 A lightweight React component for adding interactive RGB split (chromatic aberration) effects to images.
 
-* Zero dependencies
-* SSR-safe
-* Fully typed with strict TypeScript support
+- Zero dependencies
+- SSR-safe
+- Fully typed with strict TypeScript support
 
+
+> **⚠️ Epilepsy Warning:**  
+try not to get a seizure while using this component.
 ---
 
 ## Install
@@ -26,7 +28,7 @@ import { RGBSplitImage } from "rgb-split-image";
   src="/hero.jpg"
   alt="Hero"
   idleEffect="breathe"
-  splitDistance={20}
+  splitDistance={10}
 />;
 ```
 
@@ -36,12 +38,12 @@ Drop it in, pick an effect, and you’re good to go.
 
 ## Available Effects
 
-| Effect        | What it does                                |
-| ------------- | ------------------------------------------- |
-| `none`        | No channel split  everything stays aligned |
-| `breathe`     | Subtle, looping sine-wave motion            |
-| `followMouse` | Channels shift toward the cursor            |
-| `glitch`      | Fast, random displacement each frame        |
+| Effect        | What it does                              |
+| ------------- | ----------------------------------------- |
+| `none`        | No channel split everything stays aligned |
+| `breathe`     | Subtle, looping sine-wave motion          |
+| `followMouse` | Channels shift toward the cursor          |
+| `glitch`      | Fast, random displacement each frame      |
 
 ---
 
@@ -100,11 +102,11 @@ If you pass them without activating the relevant effect, TypeScript will throw a
 <RGBSplitImage
   src="/photo.jpg"
   idleEffect="breathe"
-  breatheSpeed={1.5}
+  breatheSpeed={0.75}
   onClick="glitch"
-  effectDuration={800}
-  effectIntensity={2}
-  splitDistance={40}
+  effectDuration={400}
+  effectIntensity={1}
+  splitDistance={20}
 />
 ```
 
@@ -115,7 +117,7 @@ If you pass them without activating the relevant effect, TypeScript will throw a
   src="/landscape.jpg"
   idleEffect="followMouse"
   grayscale
-  splitDistance={30}
+  splitDistance={15}
 />
 ```
 
@@ -126,7 +128,7 @@ If you pass them without activating the relevant effect, TypeScript will throw a
   src="/grid.jpg"
   idleEffect="followMouse"
   trackWindowMouse
-  splitDistance={40}
+  splitDistance={20}
 />
 ```
 
@@ -134,13 +136,14 @@ If you pass them without activating the relevant effect, TypeScript will throw a
 
 ## Accessibility
 
-* Automatically respects `prefers-reduced-motion`
-* Pauses when out of view (via `IntersectionObserver`)
-* Optional `disableOnMobile` to reduce battery usage
-* Duplicate channel layers are marked `aria-hidden="true"`
+- Automatically respects `prefers-reduced-motion`
+- Pauses when out of view (via `IntersectionObserver`)
+- Optional `disableOnMobile` to reduce battery usage
+- Duplicate channel layers are marked `aria-hidden="true"`
 
 ---
 
 ## License
 
 MIT [Jafar Sabaouni](https://github.com/Jafar-Sabaouni)
+
