@@ -28,10 +28,7 @@ const RGBSplitImageInner = React.forwardRef<HTMLElement, RGBSplitImageProps<any,
         ...rest
     } = props;
 
-    // ... internal component code remains structurally the same ...
     const filterId = useId();
-
-    // Handle disableOnMobile and prefers-reduced-motion
     const [isDisabled, setIsDisabled] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const containerRef = useRef<HTMLElement | null>(null);
@@ -151,19 +148,15 @@ const RGBSplitImageInner = React.forwardRef<HTMLElement, RGBSplitImageProps<any,
         return filters.join(' ');
     };
 
-    // Determine SVG matrices
     let rMatrix, gMatrix, bMatrix;
     if (colorSpace === 'cmyk') {
-        // CMYK approximation (Cyan, Magenta, Yellow)
-        rMatrix = "0 0 0 0 0   0 1 0 0 0   0 0 1 0 0   0 0 0 1 0"; // Cyan
-        gMatrix = "1 0 0 0 0   0 0 0 0 0   0 0 1 0 0   0 0 0 1 0"; // Magenta
-        bMatrix = "1 0 0 0 0   0 1 0 0 0   0 0 0 0 0   0 0 0 1 0"; // Yellow
+        rMatrix = "0 0 0 0 0   0 1 0 0 0   0 0 1 0 0   0 0 0 1 0";
+        gMatrix = "1 0 0 0 0   0 0 0 0 0   0 0 1 0 0   0 0 0 1 0";
+        bMatrix = "1 0 0 0 0   0 1 0 0 0   0 0 0 0 0   0 0 0 1 0";
     } else {
-        // Default RGB
-        rMatrix = "1 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 1 0"; // Red
-        gMatrix = "0 0 0 0 0   1 0 0 0 0   0 0 0 0 0   0 0 0 1 0"; // Green (Wait, a typical green matrix is 0 1 0 0 0, let me check)
-        gMatrix = "0 0 0 0 0   0 1 0 0 0   0 0 0 0 0   0 0 0 1 0"; // Green
-        bMatrix = "0 0 0 0 0   0 0 0 0 0   0 0 1 0 0   0 0 0 1 0"; // Blue
+        rMatrix = "1 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 1 0";
+        gMatrix = "0 0 0 0 0   0 1 0 0 0   0 0 0 0 0   0 0 0 1 0";
+        bMatrix = "0 0 0 0 0   0 0 0 0 0   0 0 1 0 0   0 0 0 1 0";
     }
 
     return (
@@ -197,7 +190,6 @@ const RGBSplitImageInner = React.forwardRef<HTMLElement, RGBSplitImageProps<any,
                 </defs>
             </svg>
 
-            {/* Base Layer (Blue/Yellow/Neutral depending on colorspace) */}
             <Component
                 {...rest}
                 src={src}
@@ -205,7 +197,6 @@ const RGBSplitImageInner = React.forwardRef<HTMLElement, RGBSplitImageProps<any,
                 style={{ ...baseImageStyles, filter: applyFilters(`${filterId}-b`) }}
             />
 
-            {/* Red/Cyan Layer */}
             <Component
                 {...rest}
                 src={src}
@@ -215,7 +206,6 @@ const RGBSplitImageInner = React.forwardRef<HTMLElement, RGBSplitImageProps<any,
                 style={{ ...channelStyles, filter: applyFilters(`${filterId}-r`) }}
             />
 
-            {/* Green/Magenta Layer */}
             <Component
                 {...rest}
                 src={src}

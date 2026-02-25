@@ -15,7 +15,6 @@ function App() {
 
       <div className="gallery-grid">
 
-        {/* 1. Standard Breathe */}
         <div className="gallery-item">
           <div className="image-container">
             <RGBSplitImage
@@ -34,7 +33,6 @@ function App() {
           </div>
         </div>
 
-        {/* 2. Follow Mouse */}
         <div className="gallery-item">
           <div className="image-container">
             <RGBSplitImage
@@ -53,7 +51,6 @@ function App() {
           </div>
         </div>
 
-        {/* 3. Click to Glitch */}
         <div className="gallery-item">
           <div className="image-container">
             <RGBSplitImage
@@ -75,7 +72,6 @@ function App() {
           </div>
         </div>
 
-        {/* 4. Hover to Glitch over Breathe */}
         <div className="gallery-item">
           <div className="image-container">
             <RGBSplitImage
@@ -95,7 +91,6 @@ function App() {
           </div>
         </div>
 
-        {/* 5. Breathe on Mount */}
         <div className="gallery-item">
           <div className="image-container">
             <RGBSplitImage
@@ -117,7 +112,6 @@ function App() {
           </div>
         </div>
 
-        {/* 6. Grayscale Follow */}
         <div className="gallery-item">
           <div className="image-container">
             <RGBSplitImage
@@ -136,7 +130,6 @@ function App() {
           </div>
         </div>
 
-        {/* 7. Extreme Distort (CMYK) */}
         <div className="gallery-item">
           <div className="image-container">
             <RGBSplitImage
@@ -155,7 +148,6 @@ function App() {
           </div>
         </div>
 
-        {/* 8. Hover to Breathe */}
         <div className="gallery-item">
           <div className="image-container">
             <RGBSplitImage
@@ -175,7 +167,6 @@ function App() {
           </div>
         </div>
 
-        {/* 9. Global Mouse Tracking */}
         <div className="gallery-item" style={{ gridColumn: '1 / -1', maxWidth: '100%', borderTop: '1px solid #1a1a1a', backgroundColor: '#050505' }}>
           <div className="image-container" style={{ maxWidth: '800px', height: '400px', width: '100%' }}>
             <RGBSplitImage
