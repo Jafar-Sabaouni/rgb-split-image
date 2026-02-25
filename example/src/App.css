@@ -1,0 +1,89 @@
+/* Minimalist Flat CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  background-color: #0d0d0d;
+  color: #ededed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1px; /* Creates hairline borders between flat items */
+  background-color: #1a1a1a; /* Hairline color */
+  border-top: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
+  width: 100%;
+}
+
+.gallery-item {
+  background-color: #0d0d0d;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-item:hover {
+  background-color: #111111;
+}
+
+.image-container {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  /* Flattened - no border radius, hard edges */
+}
+
+h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.25rem;
+}
+
+p.description {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 280px;
+}
+
+i {
+  color: #999;
+  font-style: normal;
+  font-family: monospace;
+  font-size: 0.8rem;
+  background: #1a1a1a;
+  padding: 0.1rem 0.3rem;
+}
