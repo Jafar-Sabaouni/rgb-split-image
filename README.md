@@ -5,11 +5,11 @@ A lightweight React component for adding interactive RGB split (chromatic aberra
 - Zero dependencies
 - SSR-safe
 - Fully typed with strict TypeScript support
+- **React only** (Works with Next.js, Remix, React,Gatsby )
 
+> **⚠️ Epilepsy Warning:**
 
-> **⚠️ Epilepsy Warning:**  
-try not to get a seizure while using this component.
----
+## try not to get a seizure while using this component.
 
 ## Install
 
@@ -146,4 +146,3 @@ If you pass them without activating the relevant effect, TypeScript will throw a
 ## License
 
 MIT [Jafar Sabaouni](https://github.com/Jafar-Sabaouni)
-
